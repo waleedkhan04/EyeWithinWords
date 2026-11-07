@@ -6,6 +6,8 @@
 - Verified: native headless test + pygbag 0.9.3 web build boot and render in Chromium.
 - Added `vercel.json` (Git-based Vercel deploy), `README.md`, MIT `LICENSE`, `docs/preview.jpg`.
 - Pinned pygbag to 0.9.3 in `deploy.sh` for reproducible builds.
+- Fixed Vercel build: system Python is uv-managed (PEP 668 blocks pip). pygbag now installs into a venv at
+  `/tmp/pygbag-venv`, outside the project so pygbag doesn't bundle it into the web build.
 
 ## 2026-10-24
 - Initial build: text-row background, almond eye with bright interior, rotating text-ring iris, pupil, glint.
